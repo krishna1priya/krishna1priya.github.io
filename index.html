@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Krishna Priya">
+        <meta name="description" content="Hey there! I'm Krishna. I'm a Machine Learning Engineer from IU Bloomington & IIT Kanpur.">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <title>Krishna Priya</title>
+    </head>
+    <body>
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo"></i> Krishna</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list grid">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">
+                                <i class="uil uil-estate nav__icon"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">
+                                <i class="uil uil-user nav__icon"></i> About
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#experience" class="nav__link">
+                                <i class="uil uil-briefcase-alt nav__icon"></i> Experience
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">
+                                <i class="uil uil-chart-pie-alt nav__icon"></i> Skills
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#portfolio" class="nav__link">
+                                <i class="uil uil-scenery nav__icon"></i> Projects
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">
+                                <i class="uil uil-message nav__icon"></i> Contact
+                            </a>
+                        </li>
+
+                    </ul>
+                    
+                    <i class="uil uil-times nav__close" id="nav-close"></i>
+                </div>
+
+                
+            </nav>
+        </header>
+
+        <main class="main">
+            <section class="home section" id="home">
+                <div class="home__container container">
+                    <div class="home__content grid">
+                        <div class="home__img">
+                            <svg class="home__blob" ViewBox="0 0 200 187">
+                                <image class="home__blob-img" x="25" y="12" xlink:href="./assets/img/homepic.png"/>
+                            </svg>
+                        </div>
+
+                        <div class="home__data">
+                            <h1 class="home__title">Hey, I'm Krishna!</h1>
+                            <h2 class="home__subtitle">Machine Learning Engineer | Software Engineer</h2>
+                            <h3 class="home__subtitle">Grad Student, Indiana University</h3>
+                            <h3 class="home__subtitle">IIT Kanpur Alumni</h3>
+                            <div class="spacer-large">I am a passionate about...</div>
+                            <span id="element"></span>
+                            <br>
+                            <div class="spacer-small"></div>
+                            <a href="#contact" class="btn">Contact Me!</a>
+                            <div class="social-icons">
+                                <a href="https://www.linkedin.com/in/krishna-priya-a16104267/"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href=""><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about section" id="about">
+                <h2 class="section__title">About Me!</h2>
+
+                <div class="about__container container grid">
+                    <img src="./assets/img/about_pic.jpeg" alt="Krishna ML Engineer" class="about__img">
+
+                    <div class="about__data">
+                        <p class="about__description">
+                            I'm a passionate software engineer with a keen interest in crafting innovative solutions to complex problems. 
+                            With a deep love for coding, I thrive on turning ideas into functional, user-friendly applications. 
+                            My journey in the world of technology has equipped me with a versatile skill set, allowing me to tackle challenges from algorithm optimization to intuitive 
+                            user interfaces. My commitment to quality and a relentless pursuit of excellence drive me to deliver software that not only meets 
+                            expectations but also exceeds them."
+                        </p>
+
+                        <div class="about__info">
+                            <div>
+                                <span class="about__info-title">02+</span>
+                                <span class="about__info-name">Years XP</span>
+                            </div>
+                            <div>
+                                <span class="about__info-title">10+</span>
+                                <span class="about__info-name">Projects</span>
+                            </div>
+                            <div>
+                                <span class="about__info-title">02</span>
+                                <span class="about__info-name">Companies</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="skill section" id="skills">
+                <h1 class="subtitle">Skills</h1>
+                <div class="skills-container">
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" skill-target="#programming" onclick="opentab(event, 'programming')">Programming</p>
+                        <p class="tab-links" skill-target="#libraries" onclick="opentab(event, 'libraries')">Libraries & Tools</p>
+                        <p class="tab-links" skill-target="#ai&ml" onclick="opentab(event, 'ai&ml')">AI & Machine Learning</p>
+                        <p class="tab-links" skill-target="#databases" onclick="opentab(event, 'databases')">Databases & Computation</p>
+                    </div>
+                    <div class="tab-contents skill__active" skill-content id="programming">
+                        <div class="charts">
+                            <div class="skill-chart">
+                                <img src="./assets/img/c++logo.png" class="skill-logo">
+                                <div class="skill-name">C++</div>
+                            </div>
+                            <div class="skill-chart">
+                                <img src="./assets/img/pythonlogo.png" class="skill-logo">
+                                <div class="skill-name">Python</div>
+                            </div>
+                            <div class="skill-chart">
+                                <img src="./assets/img/sqllogo.png" class="skill-logo">
+                                <div class="skill-name">SQL</div>
+                            </div>
+                            <div class="skill-chart">
+                                <img src="./assets/img/matlablogo.png" class="skill-logo">
+                                <div class="skill-name">MATLAB</div>
+                            </div>
+                            <div class="skill-chart">
+                                <img src="./assets/img/htmlcsslogo.png" class="skill-logo">
+                                <div class="skill-name">HTML/CSS</div>
+                            </div>
+                            <div class="skill-chart">
+                                <img src="./assets/img/julialogo.png" class="skill-logo">
+                                <div class="skill-name">Julia</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-contents" skill-content id="libraries">
+                        <div class="charts">
+                            <div class="skill-chart">
+                                <img src="./assets/img/githublogo.png" class="skill-logo">
+                                <div class="skill-name">Github</div>
+                            </div>
+                            <div class="skill-chart">
+                                <img src="./assets/img/fastapi.svg" class="skill-logo">
+                                <div class="skill-name">FastAPI</div>
+                            </div>
+                            <div class="skill-chart">
+                                <img src="./assets/img/docker.png" class="skill-logo">
+                                <div class="skill-name">Docker</div>
+                            </div>
+                            <div class="skill-chart">
+                                <img src="./assets/img/reactlogo.png" class="skill-logo">
+                                <div class="skill-name">React</div>
+                            </div>
+                            <div class="skill-chart">
+                                <img src="./assets/img/postman.png" class="skill-logo">
+                                <div class="skill-name">Postman</div>
+                            </div>
+                            <div class="skill-chart">
+                                <img src="./assets/img/jira1.png" class="skill-logo">
+                                <div class="skill-name">Jira</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-contents" skill-content id="ai&ml">
+                        <div class="charts">
+                            <div class="skill-chart">
+                                <img class="skill-logo" src="./assets/img/tensorflow.png">
+                                <div class="skill-name">TensorFlow</div>
+                            </div>
+                            <div class="skill-chart">
+                                <img src="https://miro.medium.com/v2/resize:fit:1190/format:webp/1*ax2uBqfp963n4PQVqmGplQ.png" class="skill-logo">
+                                <div class="skill-name">Spacy</div>
+                            </div>
+                            <div class="skill-chart">
+                                <img src="./assets/img/scilearn.png" class="skill-logo">
+                                <div class="skill-name">Scikit-learn</div>
+                            </div>
+                            <div class="skill-chart">
+                                <img src="./assets/img/opencv.png" class="skill-logo">
+                                <div class="skill-name">OpenCV</div>
+                            </div>
+                            <div class="skill-chart">
+                                <img src="./assets/img/numpy.svg" class="skill-logo">
+                                <div class="skill-name">Numpy</div>
+                            </div>
+                            <div class="skill-chart">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Pandas_mark.svg/1200px-Pandas_mark.svg.png" class="skill-logo">
+                                <div class="skill-name">Pandas</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-contents" skill-content id="databases">
+                        <div class="charts">
+                            <div class="skill-chart">
+                                <img class="skill-logo" src="./assets/img/postgreslogo.png">
+                                <div class="skill-name">PostgreSQL</div>
+                            </div>
+                            <div class="skill-chart">
+                                <img src="./assets/img/Azurelogo.png" class="skill-logo">
+                                <div class="skill-name">Azure</div>
+                            </div>
+                            <div class="skill-chart">
+                                <img src="./assets/img/mysql.png" class="skill-logo">
+                                <div class="skill-name">MySQL</div>
+                            </div>
+                            <div class="skill-chart">
+                                <img src="./assets/img/calculusicon.png" class="skill-logo">
+                                <div class="skill-name">Calculus</div>
+                            </div>
+                            <div class="skill-chart">
+                                <img src="./assets/img/statsicon.png" class="skill-logo">
+                                <div class="skill-name">Statistics</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            
+
+            <section class="qualification section" id="experience">
+                <h2 class="section__title">My Journey</h2>
+                <div class="qualification__container container">
+                    <div class="qualification__tabs">
+                        <div class="qualification__button button--flex  qualification__active" data-target="#education">
+                            <i class="uil uil-graduation-cap qualification__icon"></i>
+                            Academic
+                        </div>
+
+                        <div class="qualification__button button--flex" data-target="#work">
+                            <i class="uil uil-briefcase-alt qualification__icon"></i>
+                            Professional
+                        </div>
+                    </div>
+
+                    <div class="qualification__sections">
+                        <div class="qualification__content qualification__active" data-content id="education">
+                            <div class="qualification__data">
+                                <div>
+                                    <h3 class="qualification__title">MS, Computer Engineering - Intelligent Systems</h3>
+                                    <span class="qualification__subtitle">Indiana University, Bloomington</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2024 - 2025
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="qualification__data">                                 
+                                <div></div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                          
+                                <div>
+                                    <h3 class="qualification__title">MS, Photonics - Electrical & Electronics</h3>
+                                    <span class="qualification__subtitle">Indian Institute of Technology Kanpur</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2020 - 2022
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="qualification__data">
+                                <div>
+                                    <h3 class="qualification__title">BS, Electronics Engineering</h3>
+                                    <span class="qualification__subtitle">University of Pune</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2014 - 2018
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                </div>
+                            </div>
+    
+                        </div>
+    
+                        <div class="qualification__content" data-content id="work">
+
+                            <div class="qualification__data">
+                                <div>
+                                    <h3 class="qualification__title">Research Assistant</h3>
+                                    <span class="qualification__subtitle">School of Optometry, Indiana University </span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        Mar 2024 - Present 
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="qualification__data">
+                                <div></div>
+    
+                                <div class="qualification__time">
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+
+                                <div>
+                                    <h3 class="qualification__title">Software Engineer</h3>
+                                    <span class="qualification__subtitle">Cogoport Pvt Ltd</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        Jul 2022 - Aug 2023, Mumbai, India
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="qualification__data">
+                                <div>
+                                    <h3 class="qualification__title">Software Engineer</h3>
+                                    <span class="qualification__subtitle">L&T Infotech, (now, LTIMindtree)</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        Jun 2018 - May 2019, Bangalore, India
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>        
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+
+            <section class="portfolio section" id="portfolio">
+                <h2 class="section__title">My Projects</h2>
+                <div class="portfolio__container container swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="./assets/img/chatbot.png" alt="Drive AI vector art" class="portfolio__img">
+    
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Doctor-Patient ChatBot using LLM Fine-tuning</h3>
+                                <p class="portfolio__description">Developed a healthcare chatbot by fine-tuning the open-source LLM, Mistral-7B, on the HealthCareMagic-100k dataset, effectively enabling real-time medical consultations via an intuitive Gradio interface.
+                                    Optimized chatbot performance using QLoRA and PEFT to efficiently utilize limited GPU resources and evaluated its accuracy with BLEU, ROUGE, and METEOR metrics showcasing the potential for future scalability.
+                                </p>
+                                <a href="#" class="button button--flex button--small portfolio__button">
+                                    View
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="./assets/img/mediApp.png" alt="OnlyGANs library icon" class="portfolio__img">
+    
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">MediApp: Patient & Health Insurance Management Web Application</h3>
+                                <p class="portfolio__description">
+                                    Developed a full stack project using React and Django that provides a comprehensive platform for patients, doctors, and insurance providers to manage medical records, appointments, and insurance claims.
+                                </p>
+                                <a href="https://patient-insurance-management.vercel.app/" class="button button--flex button--small portfolio__button">
+                                    View
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="./assets/img/fringe.png" alt="" class="portfolio__img">
+    
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Fringe Analysis Using Deep Learning Method</h3>
+                                <p class="portfolio__description">Implemented a CNN V-net model to improve fringe analysis by addressing external noise limitations, benchmarking against a mathematical model, and evaluating performance on noise-corrupted fringe patterns (128x128 pixels) with varying noise levels and phase distributions.</p>
+                                <a href="#" class="button button--flex button--small portfolio__button">
+                                    View
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-button-next">
+                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+            <section class="contact-section" id="contact">
+                <div class="contact-container">
+                    <div class="contact-row">
+                        <div class="contact-left">
+                            <h1 class="contact-subtitle">Contact Me!</h1>
+                            <p><i class="fa-regular fa-envelope"></i>krishnapriya051@gmail.com</p>
+                            <div class="social-icons">
+                                <a href="https://www.linkedin.com/in/krishna-priya-a16104267/"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href=""><i class="fa-brands fa-github"></i></a>
+                            </div>
+                            <a href="files/cv_new1.pdf" download class="btn">Download my CV here</a>
+                        </div>
+                        <div class="contact-right">
+                            <form onsubmit="sendEmail(); reset(); return false;">
+                                <input type="text" id="name" name="Name" placeholder="Your name..." required>
+                                <input type="email" id="email" name = "email" placeholder="Your email..." required>
+                                <textarea name="Message" id="message" rows="6" placeholder="Your message here...."></textarea>
+                                <button type="submit" class="btn">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        
+        <a href="#" class="scrollup" id="scroll-top">
+            <i class="uil uil-arrow-up scrollup__icon"></i>
+        </a>
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <script src="./assets/js/swiper-bundle.min.js"></script>
+
+        <script src="./assets/js/main.js"></script>
+    </body>
+</html>
