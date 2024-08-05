@@ -1,19 +1,13 @@
-/*==================== MENU SHOW Y HIDDEN ====================*/
 const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),
     navClose = document.getElementById('nav-close')
 
-
-/*===== MENU SHOW =====*/
-/* Validate if constant exists */
 if(navToggle){
     navToggle.addEventListener('click', () =>{
         navMenu.classList.add('show-menu')
     })
 }
 
-/*===== MENU HIDDEN =====*/
-/* Validate if constant exists */
 if(navClose){
     navClose.addEventListener('click', () =>{
         navMenu.classList.remove('show-menu')
@@ -29,17 +23,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-/*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link')
 
 function linkAction(){
     const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav__link, we remove the show-menu class
     navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-/*==================== ACCORDION SKILLS ====================*/
 const skillsContent = document.getElementsByClassName('skills__content'),
       skillsHeader = document.querySelectorAll('.skills__header')
 
@@ -58,7 +49,6 @@ skillsHeader.forEach((el) => {
     el.addEventListener('click', toggleSkills)
 })
 
-/*==================== QUALIFICATION TABS ====================*/
 const tabs = document.querySelectorAll('[data-target]'),
 tabContents = document.querySelectorAll('[data-content]')
 
@@ -78,26 +68,6 @@ tabs.forEach(tab => {
     })
 })
 
-/*==================== SKILLS TABS ====================*/
-// const skillTabs = document.querySelectorAll('[skill-target]'),
-//       skillContents = document.querySelectorAll('[skill-content]')
-
-// skillTabs.forEach(tab => {
-//     tab.addEventListener('click', () => {
-//         const target = document.querySelector(tab.getAttribute('skill-target'))
-        
-//         skillContents.forEach(skillContent => {
-//             skillContent.classList.remove('skill__active')
-//         })
-//         target.classList.add('skill__active')
-        
-//         skillTabs.forEach(tab => {
-//             tab.classList.remove('skill__active')
-//         })
-//         tab.classList.add('skill__active')
-//     })
-// })
-/*==================== SKILLS TABS ====================*/
 const skillTabs = document.querySelectorAll('[skill-target]');
 const skillContents = document.querySelectorAll('[skill-content]');
 
@@ -112,9 +82,6 @@ function opentab(event, tabname) {
     document.getElementById(tabname).classList.add('skill__active');
 }
 
-
-
-/*==================== SERVICES MODAL ====================*/
 const modalViews = document.querySelectorAll('.services__modal'),
       modalBtns = document.querySelectorAll('.services__button'),
       modalCloses = document.querySelectorAll('.services__modal-close')
@@ -137,7 +104,6 @@ modalCloses.forEach((modalClose) => {
     })
 })
 
-/*==================== PORTFOLIO SWIPER  ====================*/
 let swiperPortfolio = new Swiper('.portfolio__container', {
     cssMode: true,
     loop: true,
@@ -152,7 +118,6 @@ let swiperPortfolio = new Swiper('.portfolio__container', {
     },
 })
 
-/*==================== TESTIMONIAL ====================*/
 let swiperTestimonial = new Swiper('.testimonial__container', {
     loop: true,
     grabCursor: true,
@@ -170,8 +135,6 @@ let swiperTestimonial = new Swiper('.testimonial__container', {
     }
 })
 
-
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
@@ -191,46 +154,47 @@ function scrollActive(){
 }
 window.addEventListener('scroll', scrollActive)
 
-/*==================== CHANGE BACKGROUND HEADER ====================*/ 
 function scrollHeader(){
     const nav = document.getElementById('header');
     if(this.scrollY >= 80) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header');
 }
 window.addEventListener('scroll', scrollHeader)
 
-/*==================== SHOW SCROLL TOP ====================*/ 
+
 function scrollTop(){
     let scrollTop = document.getElementById('scroll-top');
-    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
     if(this.scrollY >= 200) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollTop)
 
-/*==================== DARK LIGHT THEME ====================*/ 
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'uil-sun'
 
-// Previously selected topic (if user selected)
 const selectedTheme = localStorage.getItem('selected-theme')
 const selectedIcon = localStorage.getItem('selected-icon')
 
-
-
   function sendEmail() {
     (function () {
-      emailjs.init("PwewJ_e9sOjJShpQb");
+      emailjs.init("I0816tPXSI51w8Ju");
     })();
-    var serviceID = "service_iwcjqqj";
-    var templateID = "template_uuw6qpk";
+    var serviceID = "service_bczsii6";
+    var templateID = "template_dc2ykq2";
     var params = {
       sendername: document.querySelector("#name").value,
       senderemail: document.querySelector("#email").value,
       message: document.querySelector("#message").value,
     };
-    emailjs.send(serviceID, templateID, params).then(
-      res => {
-        alert('Thank you! Your message has been sent.')
-      }).catch();
-  }
+    emailjs.send(serviceID, templateID, {
+        from_name : params["sendername"],
+        to_name : "krishnapriya051@gmail.com",
+        message : params['message'], 
+        
+    //   res => {
+    //     alert('Thank you' + params['sendername']+ '! Your message has been sent.')
+    //   }).catch(error => {
+    //     console.error('Error sending email:', error);
+    //     alert('Seems like there was an error sending your message. Please try again later.');
+  });
+}
   
