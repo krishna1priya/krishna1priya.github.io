@@ -1,4 +1,4 @@
-/*========== GOOGLE FONTS ==========*/
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 /*==================== VARIABLES CSS ====================*/
 :root {
@@ -20,8 +20,6 @@
   --scroll-bar-color: hsl(0, 0%, 20%); /* Dark grey scrollbar */
   --scroll-thumb-color: hsl(0, 0%, 30%); /* Slightly lighter dark grey scrollbar thumb */
 
-
-/* Update any other necessary classes to ensure the color scheme is consistent */
 
   /*========== Font and typography ==========*/
   --body-font: 'Poppins';
@@ -225,12 +223,11 @@ img {
   bottom: 0;
 }
 
-/* Active link */
 .active-link {
   color: var(--first-color);
 }
 
-/* Change background header */
+
 .scroll-header {
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
 }
@@ -247,11 +244,11 @@ img {
 }
 
 .spacer-small {
-  margin-bottom: 4rem; /* Adjust value as needed */
+  margin-bottom: 4rem; 
 }
 
 .spacer-large {
-  margin-top: 5rem; /* Adjust value as needed */
+  margin-top: 5rem; 
 }
 
 
@@ -297,7 +294,7 @@ img {
 
 .home__data > div,
 .home__data > span {
-  font-size: 1.25rem; /* Increase this value as needed */
+  font-size: 1.25rem; 
   color: palevioletred;
 }
 

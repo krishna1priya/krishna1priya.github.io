@@ -16,7 +16,7 @@ if(navClose){
 
 document.addEventListener('DOMContentLoaded', function() {
     var typed = new Typed('#element', {
-        strings: ['Software Development...', 'Machine Learning...', 'Gen AI...', 'Computer Vision...', 'Natural Language Processing..'],
+        strings: ['Software Development...', 'Machine Learning...', 'Gen AI...', 'Computer Vision...', 'Natural Language Processing...'],
         typeSpeed: 50,
         backSpeed: 50,
         loop: true
@@ -176,10 +176,10 @@ const selectedIcon = localStorage.getItem('selected-icon')
 
   function sendEmail() {
     (function () {
-      emailjs.init("I0816tPXSI51w8Ju");
+      emailjs.init(PUBLIC_KEY);
     })();
-    var serviceID = "service_bczsii6";
-    var templateID = "template_dc2ykq2";
+    var serviceID = SERVICE_ID;
+    var templateID = TEMPLATE_ID;
     var params = {
       sendername: document.querySelector("#name").value,
       senderemail: document.querySelector("#email").value,
@@ -189,12 +189,19 @@ const selectedIcon = localStorage.getItem('selected-icon')
         from_name : params["sendername"],
         to_name : "krishnapriya051@gmail.com",
         message : params['message'], 
-        
-    //   res => {
-    //     alert('Thank you' + params['sendername']+ '! Your message has been sent.')
-    //   }).catch(error => {
-    //     console.error('Error sending email:', error);
-    //     alert('Seems like there was an error sending your message. Please try again later.');
-  });
+    });
+    emailjs.send(serviceID, templateID, {
+        from_name: params.sendername,
+        to_name: "krishnapriya051@gmail.com",  
+        message: params.message,
+        reply_to: params.senderemail  
+    })
+    .then(function(response) {
+        alert('Thank you ' + params.sendername + '! Your message has been sent successfully.');
+        console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+        console.error('Failed to send the message:', error);
+        alert('There was an error sending your message. Please try again later.');
+    });
 }
   
