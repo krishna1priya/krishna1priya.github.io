@@ -1195,7 +1195,7 @@ img {
     padding: 0 1rem;
   }
   .nav {
-    height: calc(var(--header-height) + 1.5rem);
+    height: calc(var(--header-height) + 2.5rem);
     column-gap: 1rem;
   }
   .nav__icon, .nav__close, .nav__toggle {
